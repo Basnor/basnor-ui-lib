@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/Basnor/basnor-ui-lib/issues"
   },
-  "homepage": "https://github.com/Basnor/basnor-ui-lib#readme"
+  "homepage": "https://github.com/Basnor/basnor-ui-lib#readme",
+  "dependencies": {
+    "snabbdom": "^3.5.1"
+  }
 }
