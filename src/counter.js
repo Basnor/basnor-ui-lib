@@ -7,13 +7,6 @@ export default class Counter extends BasnorUi.Component {
     this.state = {
       count: 0,
     };
-
-    // Update once every second
-    setInterval(() => {
-      this.setState({
-        count: this.state.count + 1,
-      });
-    }, 1000);
   }
 
   componentDidMount() {
@@ -21,6 +14,19 @@ export default class Counter extends BasnorUi.Component {
   }
 
   render() {
-    return <p>Counter: {this.state.count}</p>;
+    return (
+      <div>
+        <p>Counter: {this.state.count}</p>
+        <button
+          onClick={() =>
+            this.setState({
+              count: this.state.count + 1,
+            })
+          }
+        >
+          Increment
+        </button>
+      </div>
+    );
   }
 }
