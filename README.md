@@ -1,2 +1,2 @@
 # basnor-ui-lib
-Selfmade React Lib
+This lib is available here: https://basnor.github.io/basnor-ui-lib/
