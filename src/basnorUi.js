@@ -4,7 +4,9 @@ const createElement = (type, props = {}, ...children) => {
   if (type.prototype && type.prototype.isClassComponent) {
     const componentInstance = new type(props);
 
-    return componentInstance.render();
+    componentInstance.__vNode = componentInstance.render();
+
+    return componentInstance.__vNode;
   }
 
   if (typeof type === 'function') {
@@ -19,7 +21,14 @@ class Component {
 
   componentDidMount() {}
 
-  setState(partialState) {}
+  setState(partialState) {
+    this.state = {
+      ...this.state,
+      ...partialState,
+    };
+
+    BasnorUi.__updater(this);
+  }
 
   render() {}
 }
