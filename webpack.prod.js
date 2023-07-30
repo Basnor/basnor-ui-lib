@@ -17,11 +17,11 @@ module.exports = {
         loader: 'babel-loader',
       },
     ],
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: './index.html',
-        inject: 'body',
-      }),
-    ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      inject: 'root',
+    }),
+  ],
 };
